@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <div class="container">
+        <header id="header">
+
+        </header>
+        <hr />
+        <main role="main">
+            <div class="card">
+                <div class="card-header bg-primary text-white text-center" role="heading">
+                    Register
+                </div>
+                <form action="/register" method="POST" class="form-inline">
+                    <div class="form-group mr-2">
+                        <label for="username" class="mr-sm-2">Username:</label>
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Enter username">
+                    </div>
+                    <div class="form-group mr-2">
+                        <label for="password" class="mr-sm-2">Password:</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </form>
+            </div>
+
+            Already have any account ? <a href="/register">Login</a>
+        </main>
+    </div>
+    <hr />
+    <div id="footer"> </div>
+
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/partials.js"></script>
+</body>
+
+</html>
