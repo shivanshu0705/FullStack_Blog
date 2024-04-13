@@ -7,16 +7,16 @@
         let head = `<meta charset="UTF-8" />\n
         <meta http-equiv="X-UA-Compatible"/>\n
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />\n
-        <title>Using MongoDB</title>\n
+        <title>SmartBlog</title>\n
         <link rel="stylesheet" href="css/bootstrap.min.css" />\n
-        <link rel="shortcut icon" href="img/question.png" type="image/x-icon" />\n`
+        <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />\n`
         document.querySelector('head').innerHTML = head
     }
     const setNavbar = () => {
         let navbar = `<nav class="navbar navbar-expand-lg navbar-primary ">
         <div class="container-fluid" role="banner">
-          <img src="img/question.png" class="img-responsive rrounded" alt="Bootstrap Logo" width="50" />
-          <a class="navbar-brand" href="#">Blog</a>
+          <img src="img/logo.png" class="img-responsive rrounded me-2" alt="Bootstrap Logo" width="50" />
+          <a class="navbar-brand" href="#">SmartBlog</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
