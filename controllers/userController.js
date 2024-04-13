@@ -62,5 +62,12 @@ userController.post('/register', util.logRequest, async (req, res) => {
     console.log(users)
 })
 
+function checkAuthenticated(req, res, next) {
+    if (req.isAuthenticated()) {
+        return next()
+    }
+    res.redirect('/login')
+}
+
 
 module.exports = userController

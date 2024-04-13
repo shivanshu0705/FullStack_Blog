@@ -124,6 +124,8 @@
         find: find,
         insertOne: insertOne,
         insertMany: insertMany,
+        deleteOne: deleteOne,
+        deleteMany: deleteMany,
         getMongoClient: getMongoClient,
         logRequest: logRequest,
         checkAuthenticated: checkAuthenticated,

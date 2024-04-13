@@ -4,13 +4,15 @@ const Post = require("../models/post.js")
 const client = util.getMongoClient(false)
 const express = require('express')
 const postsController = express.Router()
-postsController.get('/member', util.logRequest, async (req, res, next) => {
-    console.info('Inside member.html')
-    let collection = client.db().collection('posts')
-    let post = Post('Security', 'AAA is a key concept in security', 'Pentester')
-    util.insertOne(collection, post)
-    res.sendFile('posts.html', { root: config.ROOT })
-})
+
+function checkAuthenticated(req, res, next) {
+    if (req.isAuthenticated()) {
+        return next()
+    }
+    res.redirect('/login')
+}
+
+
 postsController.get('/posts', util.logRequest, async (req, res, next) => {
     let collection = client.db().collection('posts')
     let posts = await util.find(collection, {})
@@ -36,11 +38,11 @@ postsController.get('/posts/:id', util.logRequest, async (req, res) => {
     }
 })
 
-postsController.get('/postMessage', util.logRequest, async (req, res, next) => {
+postsController.get('/postMessage', util.logRequest, checkAuthenticated, async (req, res, next) => {
     res.sendFile('postMessage.html', { root: config.ROOT })
 
 })
-postsController.post('/addPost', util.logRequest, async (req, res, next) => {
+postsController.post('/addPost', util.logRequest, checkAuthenticated, async (req, res, next) => {
     let collection = client.db().collection('posts')
     let topic = req.body.topic
     let message = req.body.message
