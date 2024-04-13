@@ -68,7 +68,7 @@
         document.querySelector("header#header").innerHTML = navbar
     }
     const setFooter = () => {
-        let footer = `<footer><kbd> &copy; <span></span> Ganga Singh. All Rights Reserved.</kbd></footer>`
+        let footer = `<footer><kbd> &copy; <span></span> Ganga Singh & Shivanshu Prabhakar. All Rights Reserved.</kbd></footer>`
         document.querySelector("div#footer").innerHTML = footer
     }
     document.addEventListener("DOMContentLoaded", () => {
