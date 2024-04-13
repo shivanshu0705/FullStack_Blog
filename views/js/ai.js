@@ -34,6 +34,21 @@
         }
     };
 
+    // open and close notice dialog
+    const handleNotice = () => {
+        const noticeDialog = document.getElementById('noticeDialog');
+        noticeDialog.showModal()
+
+        document.querySelector('#dialog').onsubmit = (e) => {
+            e.preventDefault();
+
+            noticeDialog.close();
+        }
+    }
+
+    window.onload = () => {
+        handleNotice()
+    }
     document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('form').onsubmit = handleSubmit;
     });

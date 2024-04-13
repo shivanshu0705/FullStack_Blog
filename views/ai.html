@@ -1,33 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    
-  </head>
 
-  <body>
-    <div class="container">
-      <header id="header">
-     
-      </header>
-      <hr />
-      <main role="main">
-        <div class="container w-75 m-auto mt-5">
-            <h1 class="display-4 p-4 text- text-center font-weight-bold"><strong>Generate <span class="text-success">Content</span> with <span class="text-primary">AI</span></strong></h1>
-            <form class="d-flex justify-content-center p-4">
-                <div class="form-group w-75">
-                    <input type="text" class="form-control" id="textInput" name="prompt" placeholder="Type your prompt here" required>
+<head>
+
+</head>
+
+<body>
+  <div class="container">
+    <header id="header">
+
+    </header>
+    <hr />
+    <main role="main">
+
+      <dialog id="noticeDialog" class="alert alert-warning h4 bg-dark">
+        <div class="row">
+          <div class="col-md-1">
+          </div>
+          <!--One column in any screen device-->
+          <div class="col-md-10">
+            <div class="card">
+              <div class="card-header h2 text-white bg-info text-center">
+                AI Usage Policy
+              </div>
+              <form id="dialog" method="dialog" class="text-center">
+
+                <div class="card-body">
+                  <blockquote class="blockquote mb-0">
+                    <p>
+                    <ol>
+                      <li> Accuracy and Reliability: Users acknowledge that while our AI services strive to provide
+                        accurate
+                        and reliable information, we do not guarantee the correctness, completeness, or reliability of
+                        the
+                        generated content. Users are advised to verify critical information independently.
+                      </li>
+                      <li>2. Data Privacy: We are committed to protecting user privacy and confidentiality. Any data
+                        provided
+                        to our AI services will be used solely for delivering the requested services and will not be
+                        shared
+                        with third parties without user consent.
+                      </li>
+                      <li> Intellectual Property: All intellectual property rights related to our AI services, including
+                        algorithms, models, and software, are owned by our company. Users are prohibited from
+                        reproducing,
+                        modifying, or distributing any part of our services without prior written permission.
+                      </li>
+                      <li> Acceptable Use: Users agree to use our AI services in a lawful and ethical manner. Any use
+                        for
+                        illegal, harmful, or malicious activities is strictly prohibited.
+                      </li>
+                      <li>Limitation of Liability: Our company shall not be liable for any direct, indirect, incidental,
+                        consequential, or punitive damages arising from the use or inability to use our AI services.
+                      </li>
+                    </ol>
+                    </p>
+                    <hr>
+                    <footer class="blockquote-footer">
+                      <div class="input-group mb-3">
+                        <div class="input-group-text">
+                          <input class="form-check-input mt-0" type="checkbox" value=""
+                            aria-label="Checkbox for following text input" id="agree" required>
+                        </div>
+                        <input type="text" class="form-control" aria-label="I agree to terms & conditions"
+                          value="I agree" disabled>
+                      </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Send</button>
-            </form>
-            <div id="content"></div>
-        </div>
+
+                <button class="btn btn-lg btn-info" id="noticeButton">OK</button>
+              </form>
+              </footer>
+              </blockquote>
+            </div>
+          </div>
+          <div class="col-md-1"> </div>
+
+      </dialog>
+
+      <div class="container w-75 m-auto mt-5">
+        <h1 class="display-4 p-4 text- text-center font-weight-bold"><strong>Generate <span
+              class="text-success">Content</span> with <span class="text-primary">AI</span></strong></h1>
+        <form class="d-flex justify-content-center p-4">
+          <div class="form-group w-75">
+            <input type="text" class="form-control" id="textInput" name="prompt" placeholder="Type your prompt here"
+              required>
+          </div>
+          <button type="submit" class="btn btn-primary">Send</button>
+        </form>
+        <div id="content"></div>
+      </div>
     </main>
-        <hr />
-        <div id="footer"> </div>       
-      
-    </div>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/partials.js"></script>
-    <script src="js/ai.js"></script>
-  </body>
+    <hr />
+    <div id="footer"> </div>
+
+
+  </div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/partials.js"></script>
+  <script src="js/ai.js"></script>
+</body>
+
 </html>
